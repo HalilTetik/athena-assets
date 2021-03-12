@@ -1,0 +1,1215 @@
+:root {
+    --bodyColor: #dddddd;
+    --whiteColor: #F2F2F2;
+    --orangeColor: #f0a500;
+    --darkOrangeColor: #f09000;
+    --darkGrayColor: #414141;
+    --grayColor: #a0a0a0;
+    --shadowGray: #1a1c2049;
+    --boldDarkGrayColor: #202020;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bodyColor);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    outline: none;
+}
+
+button:active {
+    outline: none;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--darkGrayColor); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--darkGrayColor); 
+}
+
+.header-darkColor {
+    background-color: var(--boldDarkGrayColor);
+    position: absolute;
+    width: 100%;
+    height: 370px;
+    opacity: .7;
+}
+
+.header-image {
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 370px;
+    object-fit: cover;
+    box-shadow: 0 5px 1px var(--shadowGray);
+}
+
+.header-hide {
+    z-index: 0;
+    transition: all .5s;
+}
+
+.header-hide-icon > .header-hide-text {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility .1s, opacity .5s linear;
+    padding: 35px;
+    padding-bottom: 0;
+    position: absolute;
+    margin-top: -60px;
+}
+
+.header-hide-icon {
+    width: 50px;
+    height: 50px;
+    padding-left: 18px;
+    padding-top: 15px;
+    background-color: var(--whiteColor);
+    box-shadow: 0 5px 1px var(--shadowGray);
+    color: var(--darkOrangeColor);
+    border-radius: 10px;
+    transition: all .5s;
+}
+
+.header-hide-icon:hover {
+    width: 200px;
+    height: 50px;
+    cursor: copy;
+    color: var(--orangeColor);
+}
+
+.header-hide:active {
+    transform: scale(.9);
+}
+
+.header-hide-icon:hover > .header-hide-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.header-hide-icon > .online {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+    padding: 15px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 15px;
+    background-color: var(--darkOrangeColor);
+    color: var(--bodyColor);
+    position: absolute;
+    margin-top: -40px;
+    margin-left: 125px;
+    box-shadow: 0 3px 1px var(--shadowGray);
+}
+
+.header-hide-icon:hover > .online {
+    visibility: visible;
+    opacity: 1;
+}
+
+.logo {
+    z-index: 0;
+}
+
+.server-logo {
+    vertical-align: middle;
+    max-height: 300px;
+    object-fit: cover;
+    animation: upDown 5s infinite;
+    transition: all .5s;
+    transform: scale(1.0);
+}
+
+.server-logo:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+@keyframes upDown {
+0% {
+    position: relative;
+    top: 0px;
+}
+50% {
+    position: relative;
+    top: 10px;
+}
+100% {
+    position: relative;
+    top: 0px;
+}
+}
+
+#particles-js {
+    z-index: -1;
+    position: absolute;
+    top: -295px;
+    width: 100%;
+}
+
+nav {
+    margin-left: 2%;
+    margin-right: 2%;
+    border-radius: 15px;
+    top: 40px;
+    z-index: 9;
+    box-shadow: 0 5px 1px var(--shadowGray);
+    transition: all .5s;
+}
+
+.navbar {
+    background-color: var(--whiteColor) !important;
+}
+
+.nav-link {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 18px;
+    color: var(--orangeColor) !important;
+    transition: all .5s;
+}
+
+.nav-link:hover {
+    transform: scale(1.05);
+    color: var(--darkOrangeColor) !important;
+}
+
+.btn-outline-primary {
+    border: 2px solid var(--orangeColor) !important;
+    color: var(--orangeColor) !important;
+    border-radius: 15px;
+    transition: all .5s;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--orangeColor) !important;
+    color: var(--bodyColor) !important;
+    border-radius: 10px;
+}
+
+.form-control {
+    border-radius: 15px !important;
+    border: 1px solid var(--orangeColor) !important;
+    background-color: transparent !important;
+    transition: all .5s;
+    color: var(--orangeColor) !important;
+}
+
+.form-control::placeholder {
+    color: var(--darkOrangeColor);
+}
+
+.justify-content-evenly {
+    margin-right: 60px;
+    margin-left: 60px;
+}
+
+.navbar-nav {
+    text-align: center;
+}
+
+.navbar-light .navbar-toggler {
+    color: var(--orangeColor) !important;
+    border-color: var(--orangeColor);
+    transition: all .5s;
+}
+
+.row {
+    margin-top: 30px;
+    margin-left: 5%;
+}
+
+.card {
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 1px var(--shadowGray);
+}
+
+.card-text {
+    color: var(--grayColor);
+}
+
+.card-img-top {
+    border-radius: 15px;
+    box-shadow: 0 5px 1px var(--shadowGray);
+}
+
+.card.right {
+    width: 75%;
+}
+
+.card-img-top.right {
+    height: 100px;
+    object-fit: cover;
+    box-shadow: none;
+    border-radius: 15px 15px 0 0;
+    border-bottom: 10px solid var(--darkOrangeColor);
+}
+
+.card-pp {
+    margin-top: -70px;
+    width: 70px;
+    border-radius: 50%;
+    border: 8px solid var(--orangeColor);
+    transition: border .1s, transform .5s;
+}
+
+.card-pp:hover {
+    transform: scale(1.1);
+    border: 5px solid var(--orangeColor);
+    cursor: pointer;
+}
+
+.card-button {
+    display: block;
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 15px;
+    border: 2px solid var(--darkOrangeColor);
+    color: var(--orangeColor);
+    background-color: transparent;
+    box-shadow: 0 5px 1px var(--shadowGray);
+    transition: all .5s;
+    position: relative;
+}
+
+.card-button:hover {
+    border: 2px solid var(--darkOrangeColor);
+    color: var(--bodyColor);
+    background-color: var(--darkOrangeColor);
+    box-shadow: 0 0px 0px var(--shadowGray);
+    top: 5px;
+}
+
+.right-discord {
+    margin: 0 auto;
+    float: none;
+    border-radius: 15px;
+}
+
+.pages {
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+.page-item {
+    width: 100%;
+}
+
+.page-link {
+    color: var(--orangeColor);
+    font-size: 18px;
+    background-color: transparent !important;
+    border: 1px solid var(--darkOrangeColor);
+    transition: all .5s;
+    box-shadow: 0 5px 1px var(--shadowGray);
+}
+
+.page-link:hover {
+    background-color: var(--darkOrangeColor) !important;
+    color: var(--bodyColor);
+    box-shadow: 0 0 0 var(--shadowGray);
+    top: 5px;
+}
+
+footer {
+    width: 100%;
+    background-color: var(--whiteColor);
+}
+
+footer .card {
+    background-color: transparent;
+    box-shadow: 0 0 0 var(--shadowGray);
+    border: transparent;
+}
+
+.card-ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.card-ul li {
+    color: var(--grayColor);
+    transition: all .5s;
+}
+
+.card-ul li:hover {
+    color: var(--darkGrayColor);
+}
+
+.modal-content {
+    background-color: transparent !important;
+    border-color: transparent;
+}
+
+th {
+    background-color: #ebebeb;
+    border: 3px solid white;
+    font-weight: normal;
+    border-radius: 10px 10px 0 0;
+}
+
+td {
+    background-color: var(--whiteColor);
+    border: 3px solid white;
+}
+
+table {
+    width: 100%;
+}
+
+.table-pp {
+    width: 30px;
+    border-radius: 50%;
+    transition: all .5s;
+    border: 2px solid var(--orangeColor);
+}
+
+.table-pp:hover {
+    border-radius: 25%;
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0 3px 15px var(--orangeColor);
+}
+
+.toast {
+    z-index: 9;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    border-radius: 15px;
+}
+
+.toast-header {
+    border-radius: 15px;
+}
+
+.toast-body {
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+}
+
+.toast img {
+    width: 20px;
+    border: 2px solid var(--orangeColor);
+    box-shadow: 0 5px 20px var(--orangeColor);
+    transition: all .5s;
+}
+
+.toast img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.card.profile {
+    margin: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+    height: 400px;
+}
+
+.card-content {
+    z-index: 0;
+    position: relative;
+    top: 25%;
+}
+
+.card-profile-photo {
+    border-radius: 50%;
+    border: 10px solid var(--orangeColor);
+    transition: all .5s;
+}
+
+.card-profile-photo:hover {
+    box-shadow: 0 0 50px var(--orangeColor);
+    transform: scale(1.1);
+    cursor: pointer;
+    border: 5px solid var(--orangeColor);
+    border-radius: 25%;
+}
+
+.card-darkColor {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--boldDarkGrayColor);
+    opacity: .7;
+    border-radius: 15px;
+}
+
+.mini-line {
+    background-color: var(--orangeColor) !important;
+    color: var(--orangeColor) !important;
+    height: 5px !important;
+    border: 0px solid transparent !important;
+    border-radius: 15px;
+    opacity: 1 !important;
+}
+
+.row.profile {
+    margin-top: -9%;
+    margin-left: 9%;
+    margin-right: 9%;
+}
+
+.text-muted {
+    background-color: var(--bodyColor);
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 5px;
+    text-shadow: 0 0 15px var(--grayColor);
+    transition: all .5s;
+}
+
+.text-muted:hover {
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.card-next {
+    width: 100%;
+    border: 2px solid var(--darkOrangeColor);
+    border-radius: 10px;
+    background-color: transparent;
+    color: var(--darkOrangeColor);
+    padding-top: 3px;
+    padding-bottom: 3px;
+    transition: all .5s;
+}
+
+.card-next:hover {
+    background-color: var(--orangeColor);
+    color: var(--whiteColor);
+    font-size: 17px;
+}
+
+.card.kredi {
+    margin: 15%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+}
+
+.mobil {
+    font-size: 60px;
+    margin-top: 0%;
+}
+
+.mobil i {
+    color: var(--grayColor);
+    transition: all .5s;
+}
+
+.mobil i:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    color: var(--orangeColor);
+}
+
+.cart {
+    font-size: 60px;
+    margin-top: 0%;
+}
+
+.cart i {
+    color: var(--grayColor);
+    transition: all .5s;
+}
+
+.cart i:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    color: var(--orangeColor);
+}
+
+.kredi-cart-back {
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-bottom: 50px;
+    background-color: var(--bodyColor);
+    margin-top: -40%;
+    border-radius: 15px;
+}
+
+.kredi-send {
+    width: 100%;
+    display: block;
+}
+
+.kredi-input {
+    width: 100%;
+    border: 2px solid var(--grayColor);
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: all .5s;
+    color: orange;
+}
+
+.kredi-input:focus {
+    outline: none;
+    border: 2px solid var(--orangeColor);
+}
+
+.kredi-input::placeholder {
+    color: var(--grayColor);
+}
+
+.swiper-container {
+    margin-top: 5%;
+    width: 88%;
+    height: 300px;
+    border-radius: 15px;
+    box-shadow: 0 5px 1px var(--shadowGray);
+}
+
+.swiper-slide {
+    height: 100%;
+    text-align: center;
+    background: var(--whiteColor);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide:hover {
+    cursor: grab;
+}
+
+.swiper-slide:active {
+    cursor: grabbing;
+}
+
+.swiper-pagination-bullet {
+    background-color: var(--grayColor) !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--shadowGray) !important;
+}
+
+.row.servers {
+    margin-top: 5%;
+    margin-left: 9%;
+    margin-right: 9%;
+}
+
+.server-card-back {
+    margin-left: -10.3%;
+    margin-top: -6%;
+    border-radius: 15px;
+    width: 50%;
+    height: 250px;
+    object-fit: cover;
+    transition: all .5s;
+    transform: scale(.9);
+    box-shadow: 0 5px 1px var(--shadowGray);
+}
+
+.server-card-back:hover {
+    transform: scale(.95);
+    cursor: pointer;
+    box-shadow: 0 2px 1px var(--shadowGray);
+}
+
+.col.server-text {
+    position: relative;
+    left: -29%;
+}
+
+.row.servers .float-end {
+    position: relative;
+    left: 50%;
+}
+
+.server-store {
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 6px;
+    padding-top: 6px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    color: var(--whiteColor);
+    background-color: var(--darkOrangeColor);
+    transition: all .5s;
+    text-align: center;
+}
+
+.server-store:hover {
+    font-size: 17px;
+    border-color: var(--orangeColor);
+    color: var(--bodyColor);
+    box-shadow: 0 3px 1px var(--shadowGray);
+}
+
+.ranks {
+    margin-top: 15%;
+    width: 48px;
+    filter: drop-shadow(0 5px 1px var(--shadowGray));
+    transition: all .5s;
+}
+
+.ranks:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.row.store {
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.fiyat {
+    position: absolute;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 0 15px 0 15px;
+    background-color: var(--darkGrayColor);
+    color: var(--darkOrangeColor);
+    box-shadow: 0 5px 1px var(--shadowGray);
+}
+
+.fiyat::after {
+    content: '₺';
+}
+
+.nav {
+    margin-top: 5% !important;
+    margin-bottom: -2% !important;
+    background-color: var(--whiteColor);
+}
+
+.navbar-credit {
+    font-size: 16px;
+    margin-left: -2%;
+    color: var(--orangeColor);
+}
+
+.store-button {
+    border-radius: 5px;
+    border: 2px solid var(--orangeColor);
+    color: var(--orangeColor);
+    width: 100%;
+    text-align: center;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-size: 13px;
+    background-color: transparent;
+    transition: all .5s;
+}
+
+.store-button:hover {
+    background-color: var(--darkOrangeColor);
+    color: var(--bodyColor);
+}
+
+
+.card.support {
+    margin-top: 5%;
+    margin-left: 9%;
+    margin-right: 9%;
+}
+
+.user-profile-support {
+    height: 30px;
+    border-radius: 50%;
+    border: 3px solid var(--orangeColor);
+    transition: all .5s;
+}
+
+.user-profile-support:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px var(--orangeColor);
+    border-radius: 30%;
+}
+
+.username-support {
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--orangeColor);
+}
+
+.support-title {
+    font-size: 16px;
+}
+
+.support-see {
+    width: 100%;
+    border: 2px solid var(--orangeColor);
+    background-color: transparent;
+    color: var(--orangeColor);
+    transition: all .5s;
+}
+
+.support-see:hover {
+    background-color: var(--darkOrangeColor);
+    color: var(--whiteColor);
+}
+
+.support-create {
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    border: 2px solid var(--orangeColor);
+    background-color: transparent;
+    color: var(--orangeColor);
+    transition: all .5s;
+}
+
+.support-create:hover {
+    background-color: var(--darkOrangeColor);
+    color: var(--whiteColor);
+}
+
+.margin-top {
+    margin-top: 5%;
+    margin-left: 9%;
+    margin-right: 9%;
+}
+
+.support-input {
+    padding-left: 15px;
+    margin-left: -218%;
+    width: 200px;
+    height: 40px;
+    border: 2px solid var(--orangeColor);
+    color: var(--orangeColor);
+    background-color: transparent;
+    border-radius: 3px;
+    transition: all .5s;
+    box-shadow: 0 3px 1px var(--shadowGray);
+}
+
+.support-input::placeholder {
+    color: var(--orangeColor);
+}
+
+.support-input:focus {
+    outline: none;
+    background-color: transparent;
+}
+
+.form-select {
+    margin-left: 108%;
+    border: 2px solid var(--orangeColor);
+    background-color: transparent;
+    color: var(--orangeColor);
+    border-radius: 3px;
+    transition: all .5s;
+    width: 200px;
+    height: 40px;
+    box-shadow: 0 3px 1px var(--shadowGray);
+}
+
+.form-select:focus {
+    outline: none;
+    box-shadow: none;
+    border: 2px solid var(--orangeColor);
+    border-radius: 3px 3px 0 0;
+}
+
+select option {
+    border: 2px solid var(--orangeColor);
+    border-radius: 0 0 3px 3px;
+    transition: all .5s;
+}
+
+select option:hover {
+    background-color: var(--darkOrangeColor);
+}
+
+select option:focus {
+    outline: none;
+    box-shadow: none;
+    border: 2px solid var(--orangeColor);
+    border-radius: 3px 3px 0 0;
+}
+
+.support-textarea {
+    margin-top: 3%;
+    width: 80%;
+    background-color: transparent;
+    border: 2px solid var(--orangeColor);
+    border-radius: 3px;
+    padding-top: 10px;
+    padding-left: 10px;
+    color: var(--orangeColor);
+    transition: all .5s;
+    box-shadow: 0 5px 1px var(--shadowGray);
+}
+
+.support-textarea:focus {
+    outline: none;
+    box-shadow: none;
+    border: 2px solid var(--orangeColor);
+    box-shadow: 0 3px 1px var(--shadowGray);
+}
+
+.card {
+    background-color: var(--whiteColor);
+}
+
+.card-group .rules {
+    display: none;
+    transition: all .5s;
+}
+
+.card-group {
+    position: relative;
+    top: 25%;
+    margin-left: 35%;
+    margin-right: 35%;
+    transition: all .5s;
+}
+
+.card-group.l {
+    position: relative;
+    top: 10%;
+}
+
+.card.login {
+    position: relative;
+    top: 25%;
+}
+
+.card.login.l {
+    position: relative;
+    top: 25%;
+    margin-left: 35%;
+    margin-right: 35%;
+}
+
+.form-control.login {
+    border-color: var(--darkGrayColor) !important;
+    border-radius: 3px !important;
+    color: var(--darkGrayColor) !important;
+}
+
+.form-control.login::placeholder {
+    color: var(--darkGrayColor);
+}
+
+.form-text {
+    font-size: 12px !important;
+    margin-top: 0px;
+}
+
+.form-text.up {
+    margin-bottom: 15px;
+}
+
+.userPP {
+    margin-left: 32%;
+    margin-top: -20%;
+    margin-bottom: 15%;
+    width: 125px;
+    border-radius: 15px;
+}
+
+.join-button {
+    width: 100%;
+    margin-top: 5%;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border: 2px solid var(--orangeColor);
+    border-radius: 5px;
+    color: var(--orangeColor);
+    animation: zoom 3s infinite;
+    transition: all .5s;
+}
+
+.join-button:hover {
+    background-color: var(--orangeColor);
+    color: var(--whiteColor);
+}
+
+@keyframes zoom {
+0% {
+    transform: scale(1.0);
+}
+50% {
+    transform: scale(1.05);
+}
+100% {
+    transform: scale(1.0);
+}
+}
+
+.form-check {
+    margin-top: 2%;
+    margin-bottom: -2%;
+    color: var(--grayColor);
+}
+
+.register-login {
+    color: var(--grayColor);
+}
+
+.rules-button {
+    position: absolute;
+    left: 5%;
+    border-radius: 5px;
+    border: 0px solid transparent;
+    font-size: 20px;
+    color: var(--whiteColor);
+    background-color: var(--darkGrayColor);
+    transition: all .5s;
+}
+
+@media only screen and (max-width: 930px) {
+    .header-hide {
+        display: none;
+    }
+
+    .nav-item {
+        width: 100%;
+        display: block;
+    }
+
+    .card.right {
+        width: 100%;
+    }
+    .right-discord {
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .row {
+        margin-left: 0;
+    }
+
+    .last-online {
+        display: none;
+    }
+
+    .register-date {
+        display: none;
+    }
+
+    .card.profile {
+        margin-top: 20% !important;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    .row.profile {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    .toast {
+        display: none;
+    }
+
+    .swiper-container {
+        width: 100%;
+        margin-top: 10%;
+    }
+
+    .row {
+        margin-right: 0%;
+    }
+
+    .card.kredi {
+        margin-top: 20%;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    .card-profile-photo {
+        box-shadow: 0 0 50px var(--orangeColor);
+        transform: scale(1.1);
+        cursor: pointer;
+        border: 5px solid var(--orangeColor);
+        border-radius: 25%;
+    }
+
+    .server-card-back {
+        margin-top: -12%;
+    }
+
+    .row.servers {
+        margin-top: 15%;
+    }
+
+    .nav {
+        margin-top: 15% !important;
+    }
+
+    .card.support {
+        margin-top: 10%;
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+}
+
+
+.text-small {
+  font-size: 0.9rem;
+}
+
+.support-box {
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 15px !important;
+    box-shadow: 0 5px 1px var(--shadowGray) !important;
+}
+
+.messages-box,
+.chat-box {
+    height: 300px;
+    overflow-y: scroll;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+input::placeholder {
+  font-size: 0.9rem;
+  color: #999;
+}
+
+.right-media {
+    text-align: right;
+}
+
+.rounder-send {
+    border-radius: 5px !important;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border: 1px solid var(--grayColor) !important;
+    color: var(--grayColor) !important;
+    margin-right: 1% !important;
+}
+
+.rounder-send::placeholder {
+    color: var(--grayColor) !important;
+}
+
+.rounder-send:focus {
+    box-shadow: 0 0px 0px transparent
+}
+
+.small {
+    color: var(--bodyColor);
+}
+
+.rounder-button {
+    padding-top: 60% !important;
+    border-radius: 0px;
+    border: 0px solid transparent;
+    background-color: transparent;
+    color: var(--grayColor);
+}
+
+.rounder-button:focus {
+    outline: none;
+}
+
+.user--avatar {
+    width: 20px;
+    border-radius: 50%;
+}
+
+.user- {
+    font-size: 14px;
+}
+
+.bg-white {
+    background-color: var(--whiteColor) !important;
+}
+
+.medaiay {
+    border-radius: 5px !important;
+    border: 1px solid rgba(0,0,0,.125);
+}
+
+.top-ce {
+    position: relative;
+    top: 30%;
+    margin-left: 28%;
+    margin-right: 28%;
+    box-shadow: 0 5px 1px #aa2c2c !important;
+}
+
+.c-red {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #d63737;
+}
+
+.c-gray {
+    color: var(--grayColor) !important;
+}
+
+.c-reason.btm {
+    margin-top: -1%;
+    margin-bottom: 0%;
+}
+
+.c-reason {
+    color: var(--grayColor);
+    margin-left: 3%;
+    margin-bottom: 1%;
+}
+
+.c-link {
+    color: var(--darkGrayColor);
+    transition: all .5s;
+}
+
+.c-link:hover {
+    color: var(--grayColor);
+}
